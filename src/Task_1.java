@@ -27,9 +27,9 @@ public class Task_1 {
             }
 
             void get_results(){
-                for (int i = 0; i < limit; i++) {
+                for (int i = 0; i < count; i++) {
                     float value = x + step * i;
-                    if (count != 0 && value > count){
+                    if (limit != 0 && value > limit){
                         System.out.println("Х вышел за область установленных значений");
                     } else {
                         System.out.println(func(value));
