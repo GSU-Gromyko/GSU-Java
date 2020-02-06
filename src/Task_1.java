@@ -6,20 +6,20 @@ public class Task_1 {
 
         class Runner{
 
-            float x, step, count;
-            int limit;
+            float x, step, limit;
+            int count;
 
-            public Runner(float x, float step, int limit){
+            public Runner(float x, float step, int count){
                 this.x = x;
                 this.step = step;
-                this.limit = limit;
+                this.count = count;
             }
 
             public Runner(float x, float step, int count, float limit) {
                 this.x = x;
                 this.step = step;
-                this.limit = count;
-                this.count = limit;
+                this.count = count;
+                this.limit = limit;
             }
 
             float func(float x){
