@@ -9,10 +9,10 @@ public class Task_1 {
             float x, step, count;
             int limit;
 
-            public Runner(float x, float step, int count){
+            public Runner(float x, float step, int limit){
                 this.x = x;
                 this.step = step;
-                limit = count;
+                this.limit = limit;
             }
 
             public Runner(float x, float step, int count, float limit) {
