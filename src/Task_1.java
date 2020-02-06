@@ -6,22 +6,20 @@ public class Task_1 {
 
         class Runner{
 
-            // a - x, h - step, n - count
-            // m - ограничение для 2й части задания
-            float a, h, m;
-            int n;
+            float x, step, count;
+            int limit;
 
             public Runner(float x, float step, int count){
-                a = x;
-                h = step;
-                n = count;
+                this.x = x;
+                this.step = step;
+                limit = count;
             }
 
             public Runner(float x, float step, int count, float limit) {
-                a = x;
-                h = step;
-                n = count;
-                m = limit;
+                this.x = x;
+                this.step = step;
+                this.limit = count;
+                this.count = limit;
             }
 
             float func(float x){
@@ -29,9 +27,9 @@ public class Task_1 {
             }
 
             void get_results(){
-                for (int i = 0; i < n; i++) {
-                    float value = a + h * i;
-                    if (m != 0 && value > m){
+                for (int i = 0; i < limit; i++) {
+                    float value = x + step * i;
+                    if (count != 0 && value > count){
                         System.out.println("Х вышел за область установленных значений");
                     } else {
                         System.out.println(func(value));
