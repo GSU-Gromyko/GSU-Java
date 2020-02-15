@@ -6,11 +6,11 @@ public class Runner {
         // 1
         Employer[] slaves = new Employer[7];
 
-        slaves[0] = new Employer("Name1", 10, 4);
-        slaves[1] = new Employer("Name2", 24, 9);
-        slaves[3] = new Employer("Name4", 50, 7);
-        slaves[4] = new Employer("Name5", 42, 8);
-        slaves[5] = new Employer("Name4", 70, 3);
+        slaves[0] = new Employer("Name0", 10, 4);
+        slaves[1] = new Employer("Name1", 24, 9);
+        slaves[3] = new Employer("Name3", 50, 7);
+        slaves[4] = new Employer("Name4", 42, 8);
+        slaves[5] = new Employer("Name3", 70, 3);
         slaves[6] = new Employer();
 
         // 2
@@ -31,8 +31,8 @@ public class Runner {
             } else {
                 continue;
             }
-            for (int worker_2_id = 0; worker_2_id < slaves.length; worker_2_id++) {
-                if (worker_id != worker_2_id && slaves[worker_2_id] != null
+            for (int worker_2_id = worker_id + 1; worker_2_id < slaves.length; worker_2_id++) {
+                if (slaves[worker_2_id] != null
                         && slaves[worker_id].get_account().equals(slaves[worker_2_id].get_account())){
 
                     sum_of_durations += slaves[worker_2_id].get_number_of_days();
