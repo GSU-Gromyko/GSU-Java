@@ -1,4 +1,5 @@
 import by.gsu.pms.Employer;
+import by.gsu.pms.Converter;
 
 public class Runner {
     public static void main(String[] args) {
@@ -73,6 +74,8 @@ public class Runner {
         System.out.println("Самый большой составляет: " + worker_total + "р. И принадлежит " +
                 slaves[worker_number].get_account());
 
+        // convert
+        System.out.println(Converter.convert(432, 2.15, 3));
 
     }
 }
