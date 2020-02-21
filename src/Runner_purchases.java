@@ -2,11 +2,12 @@ import purchases.Days;
 import purchases.Purchase;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Runner_purchases {
     public static void main(String[] args) {
 
-        Purchase garbages[] = new Purchase[6];
+        Purchase[] garbages = new Purchase[6];
 
         garbages[0] = new Purchase(53, "Cake", Days.FRI, 6);
         garbages[1] = new Purchase(25, "Pizza", Days.FRI, 126);
@@ -21,6 +22,7 @@ public class Runner_purchases {
         int monday_money = 0;
         int sum_money = 0;
 
+        List<Days> days_indexes = Arrays.asList(Days.values());
 
         for (Purchase garbage : garbages) {
             sum_money += garbage.money();
@@ -28,7 +30,7 @@ public class Runner_purchases {
                 monday_money += garbage.money();
             }
 
-            days_money[Arrays.asList(Days.values()).indexOf(garbage.day)]
+            days_money[days_indexes.indexOf(garbage.day)]
                     += garbage.money();
         }
 
