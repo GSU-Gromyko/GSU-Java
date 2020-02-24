@@ -1,6 +1,4 @@
-import purchases.Days;
-import purchases.Purchase;
-
+import purchases.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -51,6 +49,22 @@ public class Runner_purchases {
 
         for (int day_i = 0; day_i < days_money.length; day_i++) {
             System.out.println(Days.values()[day_i] + " = " + days_money[day_i]);
-         }
-     }
+        }
+
+        //SORTING
+        System.out.println("Without sorting:");
+        for (Purchase deffault: garbages)
+            deffault.show();
+
+        System.out.println("Sorted by names:");
+        for(Purchase names: Sort_purchases.get_sorted_purchases_by_names(garbages)){
+            names.show();
+        }
+
+        System.out.println("Sorted by values:");
+        for(Purchase values: Sort_purchases.get_sorted_purchases_by_values(garbages)){
+            values.show();
+        }
+
+    }
 }

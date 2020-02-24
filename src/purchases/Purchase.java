@@ -14,7 +14,15 @@ public class Purchase {
         this.count = count;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public int money(){
         return cost * count;
+    }
+
+    public void show(){
+        System.out.println("Cost: "+cost+" Name: "+name+" Day: "+day+" Count: "+count+" Sum: "+money());
     }
 }
