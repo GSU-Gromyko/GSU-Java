@@ -4,45 +4,34 @@ public class Book {
 
     private String name;
     private double price;
-    private boolean availability;
+    private boolean pictures;
 
     public Book(){
         this.name = "None";
         this.price = 1;
-        this.availability = false;
+        this.pictures = false;
     }
 
-    public Book(String name, double price, boolean availability) {
+    public Book(String name, double price, boolean pictures) {
         this.name = name;
         this.price = price;
-        this.availability = availability;
+        this.pictures = pictures;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public boolean isAvailability() {
-        return availability;
-    }
-
-    public void setAvailability(boolean availability) {
-        this.availability = availability;
+    public boolean isPictures() {
+        return pictures;
     }
 
     public void show(){
-        System.out.println("Name: "+name+" Price: "+price+" Availability: "+availability);
+        System.out.println("Name: "+name+" Price: "+price+" Availability: "+ pictures);
     }
+
 }
