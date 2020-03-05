@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 public class Sort_books {
 
-    public static ArrayList<Book> by_names(Book[] array){
+    public static ArrayList<Book> byNames(Book[] array){
         ArrayList<Book> sorted_by_name = new ArrayList<>();
         for (Book book: array){
             if (book != null){
@@ -15,7 +15,7 @@ public class Sort_books {
         return sorted_by_name;
     }
 
-    public static ArrayList<Book> by_prices(Book[] array){
+    public static ArrayList<Book> byPrices(Book[] array){
         ArrayList<Book> sorted_by_price = new ArrayList<>();
         for (Book book: array){
             if (book != null){

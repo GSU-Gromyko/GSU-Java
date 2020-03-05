@@ -32,14 +32,14 @@ public class Runner_books {
 
         // SORTING
         System.out.println("Sorting by names");
-        for( Book book: Sort_books.by_names(library)){
+        for( Book book: Sort_books.byNames(library)){
             if (book != null){
                 book.show();
             }
         }
 
         System.out.println("Sorting by prices");
-        for( Book book: Sort_books.by_prices(library)){
+        for( Book book: Sort_books.byPrices(library)){
             if (book != null){
                 book.show();
             }
