@@ -6,6 +6,7 @@ public class Runner_books {
 
         Book[] library = new Book[10];
 
+        library[0] = new Book("Name 0", 7, true);
         library[1] = new Book("Name 2", 12, true);
         library[2] = new Book("Name 3", 24, false);
         library[3] = new Book("Name 5", 26, true);
@@ -14,7 +15,7 @@ public class Runner_books {
         library[6] = new Book("Name 7", 60, false);
         library[7] = new Book("Name 6", 52, true);
         library[8] = new Book("Name 8", 47, false);
-        library[9] = new Book();
+        library[9] = new Book("Name 9", 62, true);
 
         double price = 0;
         int pictures =0;
