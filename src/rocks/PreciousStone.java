@@ -23,22 +23,6 @@ public class PreciousStone extends Stone {
         this.paramS2 = 0.3;
     }
 
-    public double getParamS1() {
-        return paramS1;
-    }
-
-    public void setParamS1(double paramS1) {
-        this.paramS1 = paramS1;
-    }
-
-    public double getParamS2() {
-        return paramS2;
-    }
-
-    public void setParamS2(double paramS2) {
-        this.paramS2 = paramS2;
-    }
-
     public void showInfo(){
         System.out.println("Weight: "+getWeight()+" Transparency: "+getTransparency()+" Price: "+getPrice()+ " S1: "
                 +paramS1+" S2: "+paramS2);

@@ -27,10 +27,6 @@ public class Stone {
         return weight;
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
     public double getTransparency() {
         return transparency;
     }
@@ -41,10 +37,6 @@ public class Stone {
 
     public double getPrice() {
         return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 
     public void showInfo(){
