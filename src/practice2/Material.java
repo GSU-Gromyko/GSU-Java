@@ -1,4 +1,4 @@
-package by.gsu.ms32lab;
+package practice2;
 
 public class Material {
     private String name;

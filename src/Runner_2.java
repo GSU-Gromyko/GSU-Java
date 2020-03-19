@@ -1,7 +1,7 @@
-import by.gsu.ms32lab.Detail;
-import by.gsu.ms32lab.Material;
+import practice2.Detail;
+import practice2.Material;
 
-public class Runner {
+public class Runner_2 {
     public static void main(String[] args) {
 
         Material steel = new Material("Steel", 7800);

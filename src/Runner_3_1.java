@@ -1,12 +1,12 @@
-import by.gsu.pms.Discount;
-import by.gsu.pms.DiscountPlus;
-import by.gsu.pms.Purchase;
+import practice3_1.Discount;
+import practice3_1.DiscountPlus;
+import practice3_1.Purchase;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Runner_task_2 {
+public class Runner_3_1 {
     public static void main(String[] args) throws IOException {
 
         // 1

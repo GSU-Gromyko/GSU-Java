@@ -1,4 +1,4 @@
-package by.gsu.pms;
+package practice3_1;
 
 public class DiscountPlus extends Purchase {
 
