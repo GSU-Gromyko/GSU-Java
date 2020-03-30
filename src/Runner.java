@@ -10,11 +10,16 @@ import java.util.Scanner;
 public class Runner {
     public static void main(String[] args) throws FileNotFoundException {
 
-        FileReader file = new FileReader("/home/vitya/IT/java/src/file.txt");
+        FileReader file = new FileReader("src/file.txt");
         Scanner scanner = new Scanner(file);
 
         double dailyRate = Double.parseDouble(scanner.nextLine().split("=")[1]);
-        int[] indices = Arrays.stream(scanner.nextLine().split("=")[1].split(";")).mapToInt(Integer::parseInt).toArray();
+        int[] indices = Arrays.stream(scanner
+                .nextLine()
+                .split("=")[1]
+                .split(";"))
+                .mapToInt(Integer::parseInt)
+                .toArray();
 
         Employer[] employers = new Employer[indices.length];
 
