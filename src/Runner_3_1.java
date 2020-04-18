@@ -1,5 +1,6 @@
 import practice3_1.DiscountPrice;
 import practice3_1.DiscountRequirement;
+import practice3_1.FactoryDiscount;
 import practice3_1.Purchase;
 
 import java.io.FileReader;
@@ -27,17 +28,8 @@ public class Runner_3_1 {
             double price = Double.parseDouble(item[2]);
             int count = Integer.parseInt(item[3]);
 
-            switch (type) {
-                case ("Purchase"):
-                    purchases[i] = new Purchase(name, price, count);
-                    break;
-                case ("Discount"):
-                    purchases[i] = new DiscountPrice(name, price, count);
-                    break;
-                case ("DiscountPlus"):
-                    purchases[i] = new DiscountRequirement(name, price, count);
-                    break;
-            }
+            // factory
+            purchases[i] = new FactoryDiscount().Factory(type, name, price, count);
 
             //3
             System.out.println(purchases[i].toString());
