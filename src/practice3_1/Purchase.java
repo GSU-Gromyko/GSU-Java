@@ -47,7 +47,7 @@ public class Purchase {
     }
 
     public String toString(){
-        return name + ";" + price + ";" + count;
+        return name + ";" + price + ";" + count + ";" + getCost();
     }
 
     public boolean equals(Purchase purchase){

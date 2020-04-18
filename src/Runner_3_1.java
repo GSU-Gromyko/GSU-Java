@@ -1,5 +1,5 @@
-import practice3_1.Discount;
-import practice3_1.DiscountPlus;
+import practice3_1.DiscountPrice;
+import practice3_1.DiscountRequirement;
 import practice3_1.Purchase;
 
 import java.io.FileReader;
@@ -13,7 +13,7 @@ public class Runner_3_1 {
         Purchase[] purchases = new Purchase[6];
 
         //2-5
-        FileReader file = new FileReader("/home/vitya/IT/java/src/in.txt");
+        FileReader file = new FileReader("src/in.txt");
         Scanner scan = new Scanner(file);
 
         double maxCost = 0;
@@ -32,10 +32,10 @@ public class Runner_3_1 {
                     purchases[i] = new Purchase(name, price, count);
                     break;
                 case ("Discount"):
-                    purchases[i] = new Discount(name, price, count);
+                    purchases[i] = new DiscountPrice(name, price, count);
                     break;
                 case ("DiscountPlus"):
-                    purchases[i] = new DiscountPlus(name, price, count);
+                    purchases[i] = new DiscountRequirement(name, price, count);
                     break;
             }
 
@@ -50,12 +50,10 @@ public class Runner_3_1 {
 
             //5
             for (int j = 0; j < i; j++){
-                if (purchases[i].equals(purchases[j])){
+                if (purchases[i] == purchases[j]){
                     System.out.println("Find duplicates: " + purchases[i].toString());
                 }
             }
-
-
         }
         file.close();
 
