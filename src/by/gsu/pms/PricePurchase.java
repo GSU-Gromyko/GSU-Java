@@ -17,9 +17,8 @@ public class PricePurchase extends Purchase {
         this.discount = discount;
     }
 
-    public void show(){
-        System.out.println("Name: "+getName()+" Cost: "+getCost()+" Count: "+getCount()+" Discount: "+discount
-                +" Price: "+get_price());
+    public String toString(){
+        return super.toString() + " Discount: "+ discount;
     }
 
     public int get_price(){

@@ -36,8 +36,8 @@ public class Purchase implements Comparable<Purchase>{
         return count;
     }
 
-    public void show(){
-        System.out.println("Name: "+name+" Cost: "+cost+" Count: "+count+" Price: "+get_price());
+    public String toString(){
+        return "Name: "+name+" Cost: "+cost+" Count: "+count+" Price: "+get_price();
     }
 
     public int get_price(){

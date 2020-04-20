@@ -4,8 +4,10 @@ import by.gsu.pms.Purchase;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
 
 public class Runner {
     public static void main(String[] args) throws IOException {
@@ -35,12 +37,12 @@ public class Runner {
         // 2. Print collection by separate for–each cycle.
         System.out.println("Print:");
         for (Purchase purchase: purchases){
-            purchase.show();
+            System.out.println(purchase.toString());
         }
 
         // 3. Print the purchase with the index 6.
         System.out.println("Element with index 6:");
-        purchases.get(6).show();
+        System.out.println(purchases.get(6).toString());
 
         // 4. Delete purchases with the price less than 10000 (use iterator).
         Iterator<Purchase> iterator = purchases.iterator();
@@ -59,7 +61,7 @@ public class Runner {
         // 6. Print collection by separate for–each cycle.
         System.out.println("Print:");
         for (Purchase purchase: purchases){
-            purchase.show();
+            System.out.println(purchase.toString());
         }
 
         // 7. Find and print any purchase with the cost equaled 35000 (use the method Collections.binarySearch().
