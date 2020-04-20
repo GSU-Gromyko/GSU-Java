@@ -9,6 +9,14 @@ public class PurchaseTransport extends AbstractPurchase implements ShowInfo {
         this.transportExpenses = transportExpenses;
     }
 
+    public double getTransportExpenses() {
+        return transportExpenses;
+    }
+
+    public void setTransportExpenses(double transportExpenses) {
+        this.transportExpenses = transportExpenses;
+    }
+
     @Override
     public double getCost() {
         return getCommodity().getPrice() * getNumberOfPurchasedUnits() + transportExpenses;
