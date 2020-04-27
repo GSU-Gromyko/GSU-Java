@@ -1,6 +1,0 @@
-Purchase Milk 2.5 2
-Purchase Bread 0.8 1
-Discount Milk 2.5 3
-Discount Bread 0.8 5
-DiscountPlus Milk 2.5 4
-DiscountPlus Bread 0.8 7
