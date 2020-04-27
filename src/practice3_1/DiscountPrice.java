@@ -2,10 +2,11 @@ package practice3_1;
 
 public class DiscountPrice extends Purchase {
 
-    private int discount = 20; // percents
+    private int discount; // percents
 
-    public DiscountPrice(String name, double price, int count) {
+    public DiscountPrice(String name, double price, int count, int discount) {
         super(name, price, count);
+        this.discount = discount;
     }
 
     public int getDiscount() {
@@ -18,6 +19,11 @@ public class DiscountPrice extends Purchase {
 
     @Override
     public double getCost() {
-        return getPrice() * getCount() * (100- discount) / 100;
+        return super.getCost() * (100- discount) / 100;
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() + ";" + discount;
     }
 }

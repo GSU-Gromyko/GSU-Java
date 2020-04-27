@@ -22,14 +22,10 @@ public class Runner_3_1 {
 
         for (int i = 0; i < purchases.length; i++) {
             Purchase purchase = purchases[i];
-            String[] item = scan.nextLine().split(" ");
-            String type = item[0];
-            String name = item[1];
-            double price = Double.parseDouble(item[2]);
-            int count = Integer.parseInt(item[3]);
+            String string = scan.nextLine();
 
             // factory
-            purchases[i] = new FactoryDiscount().Factory(type, name, price, count);
+            purchases[i] = new FactoryDiscount().Factory(string);
 
             //3
             System.out.println(purchases[i].toString());

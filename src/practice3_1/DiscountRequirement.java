@@ -2,19 +2,21 @@ package practice3_1;
 
 public class DiscountRequirement extends Purchase {
 
-    private static int COUNT = 5;
-    private int discount = 20;
+    private int countForDiscount;
+    private int discount ;
 
-    public DiscountRequirement(String name, double price, int count) {
+    public DiscountRequirement(String name, double price, int count, int countForDiscount, int discount) {
         super(name, price, count);
+        this.countForDiscount = countForDiscount;
+        this.discount = discount;
     }
 
-    public static int getCOUNT() {
-        return COUNT;
+    public int getCount() {
+        return countForDiscount;
     }
 
-    public static void setCOUNT(int COUNT) {
-        DiscountRequirement.COUNT = COUNT;
+    public void setCount(int count) {
+        this.countForDiscount = count;
     }
 
     public int getDiscount() {
@@ -27,10 +29,15 @@ public class DiscountRequirement extends Purchase {
 
     @Override
     public double getCost() {
-        if (getCount() > COUNT){
-            return getPrice() * getCount() * (100- discount) / 100;
+        if (getCount() > countForDiscount){
+            return super.getCost() * (100- discount) / 100;
         } else {
             return super.getCost();
         }
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() + ";" + countForDiscount + ";" + discount;
     }
 }
