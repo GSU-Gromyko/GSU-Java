@@ -1,14 +1,14 @@
 package serialisation_;
 
 import book.Book;
-import exceptions_.NewArithmeticException;
+import exceptions_.MyArithmeticException;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 
 public class DeSerialisation {
 
-    public Book[] deSerialize() throws NewArithmeticException{
+    public Book[] deSerialize() throws MyArithmeticException {
         Book[] books = null;
         try {
             ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("src/books.csv"));

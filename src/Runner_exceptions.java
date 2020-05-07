@@ -1,6 +1,6 @@
 import book.Book;
 import exceptions_.EmptyArrayException;
-import exceptions_.NewArithmeticException;
+import exceptions_.MyArithmeticException;
 import serialisation_.DeSerialisation;
 import serialisation_.Serialisation;
 
@@ -27,7 +27,7 @@ public class Runner_exceptions {
         Book[] newBooks = null;
         try {
             newBooks = deSerialisation.deSerialize();
-        } catch (NewArithmeticException e){
+        } catch (MyArithmeticException e){
             System.out.println(e);
         }
 
@@ -41,7 +41,7 @@ public class Runner_exceptions {
                 if (book.isPictures()){
                     try {
                         booksWithPictures += 1;
-                    } catch (NewArithmeticException e){
+                    } catch (MyArithmeticException e){
                         System.out.println("Error with math. Check " + e);
                     }
                 }
