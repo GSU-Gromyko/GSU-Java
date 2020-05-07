@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class runner_collections {
+public class RunnerCollections {
     public static void main(String[] args) throws IOException {
 
         ArrayList<Book> books = new ArrayList<>();
@@ -53,7 +53,7 @@ public class runner_collections {
         File csvFile = new File("src/sorted_books.csv");
         try (PrintWriter csvWriter = new PrintWriter(new FileWriter(csvFile))){
             for(Book book : books){
-                csvWriter.println(book.toString());
+                csvWriter.println(book);
             }
         } catch (IOException e) {
             //Handle exception
