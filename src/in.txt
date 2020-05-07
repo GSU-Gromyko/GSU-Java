@@ -1,0 +1,6 @@
+Purchase Milk 2.5 2
+Purchase Milk 3 1
+Discount Milk 2.5 3 15
+Discount Milk 1.9 5 10
+DiscountPlus Milk 2.4 4 5 20
+DiscountPlus Milk 2 7 5 15
