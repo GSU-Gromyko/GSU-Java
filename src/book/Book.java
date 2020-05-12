@@ -1,5 +1,7 @@
 package book;
 
+import exceptions_.NegativeValueException;
+
 import java.io.Serializable;
 
 public class Book implements Comparable<Book>, Serializable {
@@ -8,8 +10,9 @@ public class Book implements Comparable<Book>, Serializable {
     private double price;
     private boolean pictures;
 
-    public Book(String name, double price, boolean pictures) {
+    public Book(String name, double price, boolean pictures) throws NegativeValueException {
         this.name = name;
+        if (price < 0) throw new NegativeValueException("price must be greater than 0");
         this.price = price;
         this.pictures = pictures;
     }
@@ -26,7 +29,8 @@ public class Book implements Comparable<Book>, Serializable {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(double price) throws NegativeValueException {
+        if (price < 0) throw new NegativeValueException("price must be greater than 0");
         this.price = price;
     }
 

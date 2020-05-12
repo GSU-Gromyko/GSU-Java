@@ -1,11 +1,11 @@
 import book.Book;
 import exceptions_.EmptyArrayException;
-import exceptions_.MyArithmeticException;
+import exceptions_.NegativeValueException;
 import serialisation_.DeSerialisation;
 import serialisation_.Serialisation;
 
 public class Runner_exceptions {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NegativeValueException, EmptyArrayException {
 
         Book[] books = new Book[5];
 
@@ -25,11 +25,7 @@ public class Runner_exceptions {
 
         DeSerialisation deSerialisation = new DeSerialisation();
         Book[] newBooks = null;
-        try {
-            newBooks = deSerialisation.deSerialize();
-        } catch (MyArithmeticException e){
-            System.out.println(e);
-        }
+        newBooks = deSerialisation.deSerialize();
 
         for (Book book: newBooks){
             System.out.println(book);
@@ -39,11 +35,7 @@ public class Runner_exceptions {
         for (Book book: newBooks){
             if (book != null){
                 if (book.isPictures()){
-                    try {
-                        booksWithPictures += 1;
-                    } catch (MyArithmeticException e){
-                        System.out.println("Error with math. Check " + e);
-                    }
+                    booksWithPictures += 1;
                 }
             }
         }
