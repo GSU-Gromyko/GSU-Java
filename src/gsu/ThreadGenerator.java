@@ -2,7 +2,7 @@ package gsu;
 
 public class ThreadGenerator {
     private CalculatorThread[] threads;
-    private OperationType operationType;
+    private final OperationType operationType;
 
     ThreadGenerator(int countOfThreads, OperationType operationType, int maxValue) {
         this.operationType = operationType;
@@ -12,7 +12,7 @@ public class ThreadGenerator {
                 "\nOperation type:" + operationType);
 
         if (maxValue > countOfThreads && maxValue % countOfThreads == 0) {
-            CalculatorThread[] threads = new CalculatorThread[countOfThreads];
+            CalculatorThread[] arrayThreads = new CalculatorThread[countOfThreads];
 
             int threadCapacity = maxValue / countOfThreads;
             for (int i = 0; i < countOfThreads; i++) {
@@ -20,9 +20,9 @@ public class ThreadGenerator {
                 int start = i * threadCapacity + 1;
                 int end = i * threadCapacity + threadCapacity;
 
-                threads[i] = new CalculatorThread(start, end);
+                arrayThreads[i] = new CalculatorThread(start, end);
             }
-            this.threads = threads;
+            this.threads = arrayThreads;
         } else {
             System.out.println("Error maxValue must be greater than countOfThreads!");
         }

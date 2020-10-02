@@ -2,11 +2,11 @@ package gsu;
 
 public class CalculatorThread extends Thread {
 
-    private int result;
-    private int minValue;
-    private int maxValue;
+    private long result;
+    private final int minValue;
+    private final int maxValue;
 
-    public int getResult() {
+    public long getResult() {
         return this.result;
     }
 
