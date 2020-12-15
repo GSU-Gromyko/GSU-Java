@@ -5,3 +5,12 @@
 ---
 
 Разработка системы инвентаризации вычислительной техники с учетов их конфигурации и установленного лицензионного ПО 
+
+---
+Перед запуском проекта необходимо выполнить в SQL консоли следующие команды:
+
+create database javaProject;
+
+CREATE USER 'java'@'localhost' IDENTIFIED BY 'p4$$vv0rd';
+
+GRANT ALL PRIVILEGES ON javaProject.* To 'java'@'localhost';
