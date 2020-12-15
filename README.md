@@ -1,6 +1,15 @@
 # GSU-Java
 6.Заказ. В БД хранится информация о заказах магазина и товарах в них. 
 ---
+Перед запуском проекта необходимо выполнить в SQL консоли следующие команды:
+
+create database javaLab;
+
+CREATE USER 'java'@'localhost' IDENTIFIED BY 'p4$$vv0rd';
+
+GRANT ALL PRIVILEGES ON javaLab.* To 'java'@'localhost';
+
+---
 Для заказа необходимо хранить:
 * номер заказа;
 * товары в заказе;
