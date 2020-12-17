@@ -1,0 +1,1 @@
+ADD 10;comp_528;new computer;Intel Core i9; Nvidia gtx 2080; 32
